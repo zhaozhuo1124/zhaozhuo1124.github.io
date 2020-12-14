@@ -1192,7 +1192,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7785ed;
+  background: #0ade8e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1546,7 +1546,7 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .post-button {
-  margin-top: 40px;
+  margin-top: 80px;
   text-align: center;
 }
 .use-motion .post-block {
@@ -1685,7 +1685,7 @@ pre .javascript .function {
 .post-eof {
   background: #ccc;
   height: 0px;
-  margin: 80px auto 60px;
+  margin: 0px auto 0px;
   text-align: center;
   width: 8%;
 }
@@ -1693,7 +1693,7 @@ pre .javascript .function {
   display: none;
 }
 .content {
-  padding-top: 40px;
+  padding-top: 0px;
 }
 @media (min-width: 992px) {
   .post-body {
@@ -2220,7 +2220,10 @@ mjx-container + br {
   border-radius: initial;
   box-shadow: initial;
   box-sizing: border-box;
-  padding: 40px;
+  padding-top: 0px;
+  padding-right: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
   width: calc(100% - 252px);
 }
 @media (max-width: 991px) {
