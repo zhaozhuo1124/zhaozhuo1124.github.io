@@ -15,10 +15,11 @@
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"always","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="本部分以一个实际例子为讲解对象，记录自己在博客界面美化过程中试图修改界面框架的方法尝试。">
@@ -28,7 +29,7 @@
 <meta property="og:site_name" content="疏夜漫谈 | 照灼">
 <meta property="og:description" content="本部分以一个实际例子为讲解对象，记录自己在博客界面美化过程中试图修改界面框架的方法尝试。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://i.loli.net/2020/12/16/u5MgqnLcGkRhJvQ.png">
+<meta property="og:image" content="https://i.loli.net/2020/12/18/ns7Gzpjcbhyv6aI.png">
 <meta property="og:image" content="https://i.loli.net/2020/12/16/5Q7RIA9gduOHWfc.png">
 <meta property="og:image" content="https://i.loli.net/2020/12/16/2lOjUNYho945CWJ.png">
 <meta property="og:image" content="https://i.loli.net/2020/12/16/ba3oC1PXjeRkUiZ.png">
@@ -38,13 +39,13 @@
 <meta property="og:image" content="https://i.loli.net/2020/12/16/Nk7uWpFj48CTJL5.png">
 <meta property="og:image" content="https://i.loli.net/2020/12/16/rnFoj2b6x7aWgHQ.png">
 <meta property="article:published_time" content="2020-12-15T10:41:25.000Z">
-<meta property="article:modified_time" content="2020-12-16T09:04:23.649Z">
+<meta property="article:modified_time" content="2020-12-18T12:59:19.230Z">
 <meta property="article:author" content="照灼">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="NexT">
 <meta property="article:tag" content="实际案例">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.loli.net/2020/12/16/u5MgqnLcGkRhJvQ.png">
+<meta name="twitter:image" content="https://i.loli.net/2020/12/18/ns7Gzpjcbhyv6aI.png">
 
 <link rel="canonical" href="http://example.com/Hexo%E6%A1%86%E6%9E%B6%E4%B8%8B%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E6%90%AD%E5%BB%BA%E4%B8%8E%E7%BE%8E%E5%8C%96/%E3%80%90Hexo%E7%BE%8E%E5%8C%96%E3%80%91%E4%BB%A5%E9%A6%96%E9%A1%B5%E6%96%87%E7%AB%A0%E6%9C%AB%E5%B0%BE%E6%A8%AA%E7%BA%BF%E4%B8%BA%E4%BE%8B%E6%B5%85%E8%B0%88%E4%BB%A3%E7%A0%81%E5%AF%BB%E6%89%BE%E6%96%B9%E6%B3%95/">
 
@@ -206,7 +207,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-12-16 17:04:23" itemprop="dateModified" datetime="2020-12-16T17:04:23+08:00">2020-12-16</time>
+                <time title="修改时间：2020-12-18 20:59:19" itemprop="dateModified" datetime="2020-12-18T20:59:19+08:00">2020-12-18</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -253,21 +254,21 @@
       
         <h4 id="目的简介"><a href="#目的简介" class="headerlink" title="目的简介"></a>目的简介</h4><p>如下图所示，我们可以发现首页瀑布流式排布的博文每篇下方都有一条横线，这本来是 <strong>NexT</strong> 模板自带的博客分割线，但当我们启用模块边框和阴影功能后，这条横线就显得<del>又傻又呆</del>，具有<u>强迫症</u>的笔者试图从网上寻找“前人栽下的树”来乘乘凉，但不巧的是没有找到类似攻略，遂自己摸索着去寻找这条<del>呆呆傻傻横线</del>的源码，并把这个过程记录下来。</p>
 <p>注：本文涉及的知识属于前端开发领域，连皮毛都算不上的皮毛。</p>
-<p><img src="https://i.loli.net/2020/12/16/u5MgqnLcGkRhJvQ.png" alt="Hexo美化之代码区寻找_1"></p>
+<p><img src="https://i.loli.net/2020/12/18/ns7Gzpjcbhyv6aI.png"></p>
 <h4 id="使用工具"><a href="#使用工具" class="headerlink" title="使用工具"></a>使用工具</h4><ul>
 <li>带有页面检查功能的浏览器<em>（笔者使用新版EDGE浏览器）</em></li>
 <li>Windows10系统自带的查找工具</li>
 <li>查找工具可替换为 <strong>AnyTXT.Searcher</strong> </li>
 </ul>
-<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><p>首先，我们在横线区域右键鼠标，点击最下面的<strong>“检查“</strong>【<strong>ps：不同浏览器可能位置不一样</strong>】<img src="https://i.loli.net/2020/12/16/5Q7RIA9gduOHWfc.png" alt="Hexo美化之代码区寻找_2" style="zoom:67%;" /></p>
+<h4 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h4><p>首先，我们在横线区域右键鼠标，点击最下面的<strong>“检查“</strong>【<strong>ps：不同浏览器可能位置不一样</strong>】<img src="https://i.loli.net/2020/12/16/5Q7RIA9gduOHWfc.png" alt="" style="zoom:67%;" /></p>
 <p>这时我们能看到浏览器右半部分跳出来如下图所示的代码区域，并且高亮已经打到了某一行，当我们把鼠标放在这里的时候，原网页上的横线上下出现了橙黄色的一片矩形区域。这说明这行代码控制的即是这行区域。</p>
-<p><img src="https://i.loli.net/2020/12/16/2lOjUNYho945CWJ.png" alt="Hexo美化之代码区寻找_4"></p>
+<p><img src="https://i.loli.net/2020/12/16/2lOjUNYho945CWJ.png"></p>
 <p>双击此行代码，可以看到在检查区出现了新的部分，这部分包含五行控制代码，如下：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.post-eof</span>&#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">80px</span> auto <span class="number">60px</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">8%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://i.loli.net/2020/12/16/ba3oC1PXjeRkUiZ.png" alt="Hexo美化之代码区寻找_5"></p>
+<p><img src="https://i.loli.net/2020/12/16/ba3oC1PXjeRkUiZ.png"></p>
 <p>这段代码对页面中的橘黄色区域进行控制，涉及其位置、色彩、高度、宽度和区域大小， <code>height: 1px</code> 这句控制的是横线高度，我们将其前面的 <strong>“✔”</strong> 去掉，可以看到页面变成了这个样子，很明显横线消失了，达到了我们的最终目的。</p>
-<p><img src="https://i.loli.net/2020/12/16/3q8shdf9jzDEeWP.png" alt="Hexo美化之代码区寻找_7"></p>
+<p><img src="https://i.loli.net/2020/12/16/3q8shdf9jzDEeWP.png"></p>
 <p>接下来的问题就是如何在 <strong>NexT</strong> 博客模板框架下找到该段代码并进行修改、保存、部署。</p>
 <p>我们可以注意到，在浏览器检查区域该段代码右上角有 <code>main.css:1685</code> 字样，但经过修改尝试我意识到，这个文件是<strong>通过部署后生成的页面层叠文件</strong>，而不是<del>最初的设计源代码</del>。既然寻找文件的方法行不通，那对于毫无前端开发知识的新人来说能做的就只有<strong>寻找该段语句</strong>，于是我开始寻求搜索文本内容的方法。</p>
 <p>百度后知道了 <strong>Win10系统自带文件内搜索</strong> 功能，具体开启方式如下：</p>
@@ -275,19 +276,19 @@
 <li>点击文件夹左上方的 <strong>“文件”</strong> 字样，再次点击 <strong>“选项”</strong> ；</li>
 <li>选择 <strong>“搜索”</strong> 选项卡，在 <strong>“在搜索未建立索引的位置时”</strong> 功能框内将第三条 <strong>“始终搜索文件名和内容（此过程可能需要几分钟）”</strong> 打勾<code>✔</code></li>
 </ol>
-<p><img src="https://i.loli.net/2020/12/16/EQmt6WZTo5YdDp7.png" alt="Hexo美化之代码区寻找_11"></p>
+<p><img src="https://i.loli.net/2020/12/16/EQmt6WZTo5YdDp7.png"></p>
 <p>之后我们再进行搜索，这里幸运的是 <strong>“post-eof”</strong> 恰好是一个 <code>.styl</code> 文件，打开后搜索定位到 <code>.post-eof</code> 代码处，将 <code>height: 1px</code> 修改为 <code>height: 0px</code> ：</p>
-<p><img src="https://i.loli.net/2020/12/16/coRtHE3UF7DKQGr.png" alt="Hexo美化之代码区寻找_14"></p>
+<p><img src="https://i.loli.net/2020/12/16/coRtHE3UF7DKQGr.png"></p>
 <p>保存，再进行 <em>“发表三连”</em> ：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</span><br></pre></td></tr></table></figure>
 
 <p>然后我们刷新个人博客，就可以发现这一条烦人的横线消失啦！</p>
 <h4 id="AnyTXT-Searcher工具的使用"><a href="#AnyTXT-Searcher工具的使用" class="headerlink" title="AnyTXT  Searcher工具的使用"></a>AnyTXT  Searcher工具的使用</h4><p>在使用过程中，笔者发现 Windows10 自带的搜索功能并不是很准确，因此经过查找发现了这款神器，在此感谢栽树的前人。下面放上官网链接：</p>
 <p><strong><u><a target="_blank" rel="noopener" href="https://anytxt.net/">AnyTXT Searcher官网链接</a></u></strong></p>
-<p><img src="https://i.loli.net/2020/12/16/Nk7uWpFj48CTJL5.png" alt="image-20201216142503920"></p>
+<p><img src="https://i.loli.net/2020/12/16/Nk7uWpFj48CTJL5.png"></p>
 <p>下载安装即可。</p>
 <p>点击文件类型选项卡，在 <strong>新增</strong> 栏点击后在弹出的对话框中选择 <strong>新增文件夹</strong> ，将博客站点文件纳入其中，在搜索栏输入需要查寻的文本内容，点击 <strong>开始（放大镜）</strong>。</p>
-<p><img src="https://i.loli.net/2020/12/16/rnFoj2b6x7aWgHQ.png" alt="image-20201216144416980"></p>
+<p><img src="https://i.loli.net/2020/12/16/rnFoj2b6x7aWgHQ.png"></p>
 
     </div>
 
@@ -497,6 +498,8 @@
 
   
   <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
 
